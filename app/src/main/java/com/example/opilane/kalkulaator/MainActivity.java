@@ -12,18 +12,44 @@ public class MainActivity extends AppCompatActivity {
     private EditText opr1, opr2;
     private Button lahuta, liida, jaga, korruta, kustuta;
     private TextView tulemus;
+    private Boolean isFirstNumber = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        opr1=(EditText)findViewById(R.id.editOp1);
-        opr2=(EditText)findViewById(R.id.editOp2);
-        liida=(Button)findViewById(R.id.liida);
-        lahuta=(Button)findViewById(R.id.lahuta);
-        korruta=(Button)findViewById(R.id.korruta);
-        jaga=(Button)findViewById(R.id.jaga);
-        tulemus=(TextView) findViewById(R.id.tulemus);
+        opr1 = (EditText)findViewById(R.id.editOp1);
+        opr2 = (EditText)findViewById(R.id.editOp2);
+        liida = (Button)findViewById(R.id.liida);
+        lahuta = (Button)findViewById(R.id.lahuta);
+        korruta = (Button)findViewById(R.id.korruta);
+        kustuta = (Button)findViewById(R.id.kustuta);
+        jaga = (Button)findViewById(R.id.jaga);
+        tulemus = (TextView) findViewById(R.id.tulemus);
+        Button yks = (Button)findViewById(R.id.yks);
+        Button kaks = (Button)findViewById(R.id.kaks);
+        Button kolm = (Button)findViewById(R.id.kolm);
+        Button neli = (Button)findViewById(R.id.neli);
+        Button viis = (Button)findViewById(R.id.viis);
+        Button kuus = (Button)findViewById(R.id.kuus);
+        Button seitse = (Button)findViewById(R.id.seitse);
+        Button kaheksa = (Button)findViewById(R.id.kaheksa);
+        Button yheksa = (Button)findViewById(R.id.yheksa);
+        Button kymme = (Button)findViewById(R.id.kymme);
+
+        opr1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isFirstNumber = true;
+            }
+        });
+        opr2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isFirstNumber = false;
+            }
+        });
+
 
         liida.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         lahuta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if ((opr1.getText().length()>0)&&(opr2.getText().length()>0)){
                     double oper1= Double.parseDouble(opr1.getText().toString());
                     double oper2= Double.parseDouble(opr2.getText().toString());
@@ -96,9 +123,159 @@ public class MainActivity extends AppCompatActivity {
                 opr2.setText("");
                 tulemus.setText("0.00");
                 opr1.requestFocus();
+            }
+        });
+
+        yks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "1");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "1");
+                }
 
             }
         });
+
+        kaks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "2");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "2");
+                }
+
+            }
+        });
+
+        kolm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "3");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "3");
+                }
+
+            }
+        });
+
+        neli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "4");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "4");
+                }
+
+            }
+        });
+
+        viis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "5");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "5");
+                }
+
+            }
+        });
+
+        kuus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "6");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "6");
+                }
+
+            }
+        });
+
+        seitse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "7");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "7");
+                }
+
+            }
+        });
+
+        kaheksa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "8");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "8");
+                }
+
+            }
+        });
+
+        yheksa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "9");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "9");
+                }
+
+            }
+        });
+
+        kymme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isFirstNumber) {
+                    opr1.setText(opr1.getText().toString() + "0");
+                }
+                else
+                {
+                    opr2.setText(opr2.getText().toString() + "0");
+                }
+
+            }
+        });
+
 
 
 
